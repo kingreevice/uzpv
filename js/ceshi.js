@@ -33,23 +33,23 @@ async function getClassList(args) {
     var backData = new RepVideoClassList()
     backData.data = [
         {
-            type_id: '20',
-            type_name: '小米电影',
+            type_id: '229',
+            type_name: '电影',
             hasSubclass: false,
         },
         {
-            type_id: '21',
-            type_name: '小米剧集',
+            type_id: '230',
+            type_name: '电视剧',
             hasSubclass: false,
         },
         {
-            type_id: '22',
-            type_name: '小米动漫',
+            type_id: '231',
+            type_name: '综艺',
             hasSubclass: false,
         },
         {
-            type_id: '23',
-            type_name: '小米综艺',
+            type_id: '232',
+            type_name: '动漫',
             hasSubclass: false,
         },
     ]
