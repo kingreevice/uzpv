@@ -2,9 +2,9 @@
 [
     {
         "name": "玩偶哥哥",
-        "api": "https://ghp.ci/https://raw.githubusercontent.com/YYDS678/uzVideo-extensions/refs/heads/main/vod/js/wogg.js",
-        "webSite": "https://www.wogg.net",
-        "remark": "网盘 1.6.41 及以上版本可用",
+        "api": "https://ghp.ci/https://raw.githubusercontent.com/kingreevice/uzpv/refs/heads/main/js/ceshi.js",
+        "webSite": "https://www.taozi008.com",
+        "remark": "在线观看",
         "version": "3",
         "type": 1
     }
