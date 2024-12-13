@@ -59,10 +59,10 @@ async function getSubclassList(args) {
     let backData = new RepVideoSubclassList()
     return JSON.stringify(backData)
 }
-async function getSubclassVideoList(args) {
-    var backData = new RepVideoList()
-    return JSON.stringify(backData)
-}
+//async function getSubclassVideoList(args) {
+ //   var backData = new RepVideoList()
+  //  return JSON.stringify(backData)
+//}
 /**
  * 获取分类视频列表
  * @param {UZArgs} args
