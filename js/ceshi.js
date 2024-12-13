@@ -62,48 +62,4 @@ async function getSubclassList(args) {
     let backData = new RepVideoSubclassList()
     return JSON.stringify(backData)
 }
-async function getSubclassVideoList(args) {
-    var backData = new RepVideoList()
-    return JSON.stringify(backData)
-}
 
-
-
-async function getVideoList(args) {
-    var backData = new RepVideoList()
-    let url =
-        UZUtils.removeTrailingSlash(appConfig.webSite) +`/vod/index.html?page=${args.page}&type_id=${args.url}`
-    
-       // `/index.php/vod/show/id/${args.url}/page/${args.page}.html`
-    try {
-        const pro = await req(url)
-        backData.error = pro.error
-        let videos = []
-        if (pro.data) {
-            const $ = cheerio.load(pro.data)
-            let vodItems = $('.lists-content ul li')
-            vodItems.each((_, e) => {
-                let videoDet = new VideoDetail()
-                videoDet.vod_id = $(e).find('a').attr('href')
-                videoDet.vod_name = $(e)
-                    .find('a > img').attr('alt')
-                videoDet.vod_pic = $(e)
-                    .find('a > img').attr('src')
-                videoDet.vod_remarks = $(e).find('.note > span').text()
-                /*
-                  videoDet.vod_year = $(e)
-                   .find('.module-item-caption span')
-                   .first()
-                   .text()
-
-
-
-
-                 */
-                videos.push(videoDet)
-            })
-        }
-        backData.data = videos
-    } catch (error) {}
-    return JSON.stringify(backData)
-}
