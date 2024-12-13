@@ -7,5 +7,12 @@
         "remark": "在线观看",
         "version": "3",
         "type": 1
+    }, {
+        "name": "演示|昊",
+        "api": "https://ghp.ci/https://raw.githubusercontent.com/kingreevice/uzpv/refs/heads/main/js/yansi.js",
+        "webSite": "https://www.taozi008.com",
+        "remark": "在线观看",
+        "version": "3",
+        "type": 1
     }
 ]
