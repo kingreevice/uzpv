@@ -59,10 +59,10 @@ async function getSubclassList(args) {
     let backData = new RepVideoSubclassList()
     return JSON.stringify(backData)
 }
-//async function getSubclassVideoList(args) {
- //   var backData = new RepVideoList()
-  //  return JSON.stringify(backData)
-//}
+async function getSubclassVideoList(args) {
+    var backData = new RepVideoList()
+    return JSON.stringify(backData)
+}
 /**
  * 获取分类视频列表
  * @param {UZArgs} args
@@ -100,22 +100,4 @@ async function getVideoList(args) {
         backData.data = videos
     } catch (error) {}
     return JSON.stringify(backData)
-}
-
-
-
-
-
-
-function combineUrl(url) {
-    if (url === undefined) {
-        return ''
-    }
-    if (url.indexOf(appConfig.webSite) !== -1) {
-        return url
-    }
-    if (url.startsWith('/')) {
-        return appConfig.webSite + url
-    }
-    return appConfig.webSite + '/' + url
 }
