@@ -169,3 +169,20 @@ async function getVideoDetail(args) {
 
     return JSON.stringify(backData)
 }
+
+
+
+
+
+function combineUrl(url) {
+    if (url === undefined) {
+        return ''
+    }
+    if (url.indexOf(appConfig.webSite) !== -1) {
+        return url
+    }
+    if (url.startsWith('/')) {
+        return appConfig.webSite + url
+    }
+    return appConfig.webSite + '/' + url
+}
